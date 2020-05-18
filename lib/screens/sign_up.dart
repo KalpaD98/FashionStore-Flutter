@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:fsflutter/constants.dart';
 import 'package:fsflutter/widgets/auth_button_type_2.dart';
 import 'package:fsflutter/widgets/input_form_field.dart';
 
-class Login extends StatelessWidget {
-  static const String id = 'login';
+import '../constants.dart';
+
+class SignUp extends StatelessWidget {
+  static const String id = 'signup';
+  SignUp({
+    Key key,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,14 +22,14 @@ class Login extends StatelessWidget {
                 height: 120,
               ),
               Text(
-                'LOGIN',
+                'SIGN UP',
                 style: TextStyle(
                     color: kMainColor,
                     fontSize: 40,
                     fontWeight: FontWeight.w300),
               ),
               SizedBox(
-                height: 40,
+                height: 20,
               ),
               Padding(
                 padding:
@@ -34,33 +38,26 @@ class Login extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     InputFormField(
+                      hintText: 'Name',
+                    ),
+                    SizedBox(
+                      height: 35,
+                    ),
+                    InputFormField(
                       hintText: 'Email',
                     ),
                     SizedBox(
-                      height: 55,
+                      height: 35,
                     ),
                     InputFormField(
                       hintText: 'Password',
                     ),
                     SizedBox(
-                      height: 135,
+                      height: 95,
                     ),
                     AuthButtonTwo(
                       text: 'LOGIN',
                       onPressed: () {},
-                    ),
-                    SizedBox(
-                      height: 80,
-                    ),
-                    FlatButton(
-                      child: Icon(
-                        Icons.close,
-                        color: Color.fromRGBO(0, 0, 0, 0.3),
-                        size: 30,
-                      ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
                     )
                   ],
                 ),
