@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fsflutter/constants.dart';
 
 class AuthButton extends StatelessWidget {
   AuthButton({@required this.text, @required this.onPressed});
@@ -18,9 +19,7 @@ class AuthButton extends StatelessWidget {
               const Radius.circular(10.0),
             )),
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 45),
-        child: Text(text,
-            style: TextStyle(
-                fontSize: 25, color: Color.fromRGBO(255, 16, 163, 1))),
+        child: Text(text, style: TextStyle(fontSize: 25, color: kMainColor)),
       ),
     );
   }
