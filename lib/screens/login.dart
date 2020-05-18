@@ -48,6 +48,19 @@ class Login extends StatelessWidget {
                     AuthButtonTwo(
                       text: 'LOGIN',
                       onPressed: () {},
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    FlatButton(
+                      child: Icon(
+                        Icons.close,
+                        color: Color.fromRGBO(0, 0, 0, 0.3),
+                        size: 30,
+                      ), onPressed: () {
+                        Navigator.pop(context)
+                    }
+                      ,
                     )
                   ],
                 ),
