@@ -62,16 +62,7 @@ class SignUp extends StatelessWidget {
                     SizedBox(
                       height: 80,
                     ),
-                    FlatButton(
-                      child: Icon(
-                        Icons.close,
-                        color: Color.fromRGBO(0, 0, 0, 0.3),
-                        size: 30,
-                      ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                    )
+                    CloseButton()
                   ],
                 ),
               ),
