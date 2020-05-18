@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fsflutter/screens/home.dart';
+import 'package:fsflutter/screens/login.dart';
 import 'package:fsflutter/screens/sign_up.dart';
 
 void main() => runApp(MyApp());
@@ -13,10 +14,11 @@ class MyApp extends StatelessWidget {
       title: 'Fashion Store',
       theme: ThemeData(
           primaryColor: Colors.deepOrangeAccent, fontFamily: 'Avenir'),
-      initialRoute: Home.id,
+      initialRoute: Login.id,
       routes: {
         Home.id: (context) => Home(), //Home
         SignUp.id: (context) => SignUp(), //Home
+        Login.id: (context) => Login(), //Home
       },
     );
   }

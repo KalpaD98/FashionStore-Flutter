@@ -3,6 +3,8 @@ import 'package:fsflutter/constants.dart';
 import 'package:fsflutter/screens/sign_up.dart';
 import 'package:fsflutter/widgets/auth_button.dart';
 
+import 'login.dart';
+
 class Home extends StatelessWidget {
   static const String id = 'home';
 
@@ -146,8 +148,23 @@ class Home extends StatelessWidget {
                   ),
 
                   AuthButton(
-                    text: 'Sign Up',
+                    text: 'SIGN UP',
                     onPressed: () => Navigator.pushNamed(context, SignUp.id),
+                  ),
+                  SizedBox(
+                    height: 0,
+                  ),
+                  FlatButton(
+                    child: Text(
+                      'Already a member ?',
+                      style: TextStyle(
+                        color: Colors.white,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, Login.id);
+                    },
                   )
                 ],
               ),
