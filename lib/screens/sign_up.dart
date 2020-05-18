@@ -56,8 +56,21 @@ class SignUp extends StatelessWidget {
                       height: 95,
                     ),
                     AuthButtonTwo(
-                      text: 'LOGIN',
+                      text: 'SIGN UP',
                       onPressed: () {},
+                    ),
+                    SizedBox(
+                      height: 80,
+                    ),
+                    FlatButton(
+                      child: Icon(
+                        Icons.close,
+                        color: Color.fromRGBO(0, 0, 0, 0.3),
+                        size: 30,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                     )
                   ],
                 ),
