@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fsflutter/screens/home_screen.dart';
+import 'package:fsflutter/screens/home.dart';
+import 'package:fsflutter/screens/sign_up.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,9 +10,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(primaryColor: Colors.deepOrangeAccent),
-      home: HomeScreen(),
+      title: 'Fashion Store',
+      theme: ThemeData(
+          primaryColor: Colors.deepOrangeAccent, fontFamily: 'Avenir'),
+      initialRoute: Home.id,
+      routes: {
+        Home.id: (context) => Home(), //Home
+        SignUp.id: (context) => SignUp(), //Home
+      },
     );
   }
 }
