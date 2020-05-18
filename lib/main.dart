@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Fashion Store',
       theme: ThemeData(
           primaryColor: Colors.deepOrangeAccent, fontFamily: 'Avenir'),
-      initialRoute: Login.id,
+      initialRoute: Home.id,
       routes: {
         Home.id: (context) => Home(), //Home
         SignUp.id: (context) => SignUp(), //Home

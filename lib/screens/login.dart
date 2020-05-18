@@ -1,35 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:fsflutter/constants.dart';
+import 'package:fsflutter/widgets/auth_button_type_2.dart';
+import 'package:fsflutter/widgets/input_form_field.dart';
 
 class Login extends StatelessWidget {
   static const String id = 'login';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               SizedBox(
-                height: 180,
+                height: 120,
               ),
               Text(
                 'LOGIN',
                 style: TextStyle(color: kMainColor, fontSize: 40),
               ),
-              TextField(
-                decoration: InputDecoration(
-                    fillColor: Colors.red,
-                    border: InputBorder.none,
-                    hintText: 'Email'),
+              SizedBox(
+                height: 40,
               ),
-              TextField(
-                decoration: InputDecoration(
-                    fillColor: Colors.red,
-                    border: InputBorder.none,
-                    hintText: 'Password'),
-              )
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 50),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    InputFormField(
+                      hintText: 'Email',
+                    ),
+                    SizedBox(
+                      height: 55,
+                    ),
+                    InputFormField(
+                      hintText: 'Password',
+                    ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    AuthButtonTwo(
+                      text: 'LOGIN',
+                      onPressed: () {},
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
