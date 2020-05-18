@@ -16,10 +16,14 @@ class AuthButtonTwo extends StatelessWidget {
         decoration: const BoxDecoration(
             color: kMainColor,
             borderRadius: BorderRadius.all(
-              const Radius.circular(10.0),
+              const Radius.circular(5.0),
             )),
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 45),
-        child: Text(text, style: TextStyle(fontSize: 25, color: Colors.white)),
+        child: Text(text,
+            style: TextStyle(
+                fontSize: 25,
+                color: Colors.white,
+                fontWeight: FontWeight.w700)),
       ),
     );
   }

@@ -19,7 +19,10 @@ class Login extends StatelessWidget {
               ),
               Text(
                 'LOGIN',
-                style: TextStyle(color: kMainColor, fontSize: 40),
+                style: TextStyle(
+                    color: kMainColor,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w300),
               ),
               SizedBox(
                 height: 40,
@@ -40,7 +43,7 @@ class Login extends StatelessWidget {
                       hintText: 'Password',
                     ),
                     SizedBox(
-                      height: 50,
+                      height: 135,
                     ),
                     AuthButtonTwo(
                       text: 'LOGIN',
